@@ -1,4 +1,4 @@
-# Introduction
+# Introduction and Some Compare width Unity Editor Code Style
 
 ## Wrapper Components
 
@@ -124,3 +124,5 @@ this.stage.addElement(btn);
 you also can use left,right,top,bottom to define relative position with parent
 
 ![GitHub](https://github.com/terrynoya/UFlex/blob/master/doc/top_bottom.jpg)
+
+## Horizontal,Vertial,Tile(Grid) Layout
