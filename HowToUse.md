@@ -92,6 +92,8 @@ the stage help you to call OnGUI when you add the component(slider in this case)
 
 Suppose you want create a button,and keep it in the center of the EditorWindow
 
+![GitHub](https://github.com/terrynoya/UFlex/blob/master/doc/single_centered_button.png)
+
 1. define the btn size
 2. get EditorWidow size,
 3. calculate center position
@@ -120,3 +122,5 @@ btn.horizontalCenter = 0;
 this.stage.addElement(btn);
 ```
 you also can use left,right,top,bottom to define relative position with parent
+
+![GitHub](https://github.com/terrynoya/UFlex/blob/master/doc/top_bottom.jpg)
