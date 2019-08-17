@@ -121,7 +121,7 @@ btn.verticalCenter = 0;
 btn.horizontalCenter = 0;
 this.stage.addElement(btn);
 ```
-you also can use left,right,top,bottom to define relative position with parent
+you also can use left,right,top,bottom to define relative position to parent container
 
 ![GitHub](https://github.com/terrynoya/UFlex/blob/master/doc/top_bottom.jpg)
 
