@@ -157,9 +157,14 @@ GUILayout.EndHorizontal();
 GUILayout.EndVertical();
 ```
 
-![GitHub](https://github.com/terrynoya/UFlex/blob/master/doc/legacy_grid.jpg)
+some problem you will accour
 
-![GitHub](https://github.com/terrynoya/UFlex/blob/master/doc/uflex_tilelayout.jpg)
+1.the last element calculation is comlicated than the other
+2.the last element' width is 1 or 2 pixels shorter than the other, because unity automatically add some gap between your elements when using BeginHorizontal
+3.if the EditorWindow is smaller than the elments total width,the last element's width calumation is not right
+4.GUILayout.FlexibleSpace() is not work for this problem
+
+![GitHub](https://github.com/terrynoya/UFlex/blob/master/doc/legacy_grid_problem.jpg)
 
 UFlex provides TileLayout(Grid) to achieve this,use requestedColumnCount to identify column count
 
@@ -178,3 +183,6 @@ for (int i = 0; i < itemCount; i++)
 }
 this.stage.addElement(group);
 ```
+
+![GitHub](https://github.com/terrynoya/UFlex/blob/master/doc/uflex_tilelayout.jpg)
+
