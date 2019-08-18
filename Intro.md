@@ -1,4 +1,4 @@
-# Introduction and Some Compare width Unity Editor Code Style
+# Introduction,Comparison Width Traditonal Editor Code
 
 ## Wrapper Components
 
@@ -126,3 +126,25 @@ you also can use left,right,top,bottom to define relative position to parent con
 ![GitHub](https://github.com/terrynoya/UFlex/blob/master/doc/top_bottom.jpg)
 
 ## Horizontal,Vertial,Tile(Grid) Layout
+Unity provide GUILayout.BeginVertical() and GUILayout.BeginHorizontal() allow you to layout your gui component  
+Suppose you want a grid of button,3 rows and 4 columns
+
+```csharp
+int rowNum = 3;
+int colNum = 4;
+GUILayout.BeginVertical();
+for (int i = 0; i < rowNum; i++)
+{
+    GUILayout.BeginHorizontal();
+    for (int j = 0; j < colNum; j++)
+    {
+        if (GUILayout.Button("btn_" + i + "_" + j))
+        {
+            Debug.Log("btn clicked at:"+i+"_"+j);
+        }
+    }
+    GUILayout.EndHorizontal();
+}
+GUILayout.EndVertical();
+```
+
