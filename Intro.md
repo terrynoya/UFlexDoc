@@ -86,6 +86,15 @@ this.stage.addElement(group);
 besides,you don't need to write the OnGUI thing  
 the stage help you to call OnGUI when you add the component(slider in this case) as a stage child element
 
+## Componenet Event System
+UFlex provides event system, every component can dispatch and listen event,you can addListener function to listen component value change event
+
+
+## Tree and List
+
+UFlex provide tree and list component
+
+
 ## Layout
 
 ### Position the Component by,top|bottom|left|right|horizontalCenter|verticalCenter
