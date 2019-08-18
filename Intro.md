@@ -127,7 +127,11 @@ you also can use left,right,top,bottom to define relative position to parent con
 
 ## Horizontal,Vertial,Tile(Grid) Layout
 Unity provide GUILayout.BeginVertical() and GUILayout.BeginHorizontal() allow you to layout your gui component  
-Suppose you want a grid of button,3 rows and 4 columns
+Suppose you want a grid of button,3 rows and 4 columns,but you have 13 elements to layout
+
+1. define rowNum and colNum and use BeginVertical and BeginHorizontal api to layout first 12 element
+2. begin addition row for the last single element  
+3. get total width of the last line,calumate the empty space pixel value to fill the last one row
 
 ```csharp
 int rowNum = 3;
@@ -145,6 +149,32 @@ for (int i = 0; i < rowNum; i++)
     }
     GUILayout.EndHorizontal();
 }
+GUILayout.BeginHorizontal();
+float totalW = this.position.width;
+GUILayout.Button("btn_" + 12);
+GUILayout.Space(totalW - totalW / colNum);
+GUILayout.EndHorizontal();
 GUILayout.EndVertical();
 ```
 
+![GitHub](https://github.com/terrynoya/UFlex/blob/master/doc/legacy_grid.jpg)
+
+![GitHub](https://github.com/terrynoya/UFlex/blob/master/doc/uflex_tilelayout.jpg)
+
+UFlex provides TileLayout(Grid) to achieve this,use requestedColumnCount to identify column count
+
+```csharp
+GUIGroup group = new GUIGroup();
+GUITileLayout layout = new GUITileLayout();
+layout.columnAlign = GUIEnums.ColumnAlign.JUSTIFY_USING_WIDTH;
+layout.requestedColumnCount = 4;
+group.left = group.right = 0;
+group.layout = layout;
+int itemCount = 13;
+for (int i = 0; i < itemCount; i++)
+{
+    GUIButton btn = new GUIButton("btn_"+i);
+    group.addElement(btn);
+}
+this.stage.addElement(group);
+```
