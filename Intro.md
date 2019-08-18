@@ -131,7 +131,7 @@ Suppose you want a grid of button,3 rows and 4 columns,but you have 13 elements 
 
 1. define rowNum and colNum and use BeginVertical and BeginHorizontal api to layout first 12 element
 2. begin addition row for the last single element  
-3. get total width of the last line,calumate the empty space pixel value to fill the last one row
+3. get total width of the last line,calculate the empty space pixel value to fill the last one row
 
 ```csharp
 int rowNum = 3;
@@ -159,10 +159,10 @@ GUILayout.EndVertical();
 
 some problem you will accour
 
-1.the last element calculation is comlicated than the other
-2.the last element' width is 1 or 2 pixels shorter than the other, because unity automatically add some gap between your elements when using BeginHorizontal
-3.if the EditorWindow is smaller than the elments total width,the last element's width calumation is not right
-4.GUILayout.FlexibleSpace() is not work for this problem
+1. the last element calculation is comlicated than the other
+2. the last element' width is 1 or 2 pixels shorter than the other, because unity automatically add some gap between your elements when using BeginHorizontal
+3. if the EditorWindow is smaller than the elments total width,the last element's width calumation is not right
+4. GUILayout.FlexibleSpace() is not work for this problem
 
 ![GitHub](https://github.com/terrynoya/UFlex/blob/master/doc/legacy_grid_problem.jpg)
 
@@ -185,4 +185,8 @@ this.stage.addElement(group);
 ```
 
 ![GitHub](https://github.com/terrynoya/UFlex/blob/master/doc/uflex_tilelayout.jpg)
+
+1. the code is now mush more easier to read,all elements can be created by one for statement
+2. the default element's gap is 0,but you can use horizontalGap and horizontalGap
+3. use padding family property (left,right,top,bottom or padding for all) you can control how far your element is away from the parent
 
