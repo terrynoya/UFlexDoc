@@ -14,3 +14,6 @@ UFlex is dedicated to simplify and and extend Editor GUI,makes your edior code e
 - Event driven
 - You don't have to keep Value yoursef
 - Complex Component like Tree and List are provided and Easy use
+- Auto Layout System,Horizontal,Vertical and Grid
+
+ [Go to Read Intro Doc](https://github.com/terrynoya/UFlexDoc/blob/master/Intro.md)
