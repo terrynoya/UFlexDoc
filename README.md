@@ -2,6 +2,8 @@
 
 UFlex is dedicated to simplify and and extend Editor GUI,makes your edior code easier and managable.If you happened to be a flash coder,you will find UFlex is a protable framework refrence to Adobe Flex.
 
+This framework is highly inspired by the [Flexlite](https://github.com/flexlite/framework) frawework project
+
 ### Motivation
 
 - When EidtorGuiLayout cannot fit what you need,And You cannot full controll Layout.For example you want to keep a button on the bottom of the Editor Window..
